@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*para que el padding no afecte al tamaño del elemento*/
+}
+
+html {
+    font-family: "Mukta", sans-serif;
+    /*background-color: whitesmoke;*/
+    background-image: url(../imagenes/wp13326883.webp);
+    background-attachment: fixed;
+    background-size: cover; /*para que la imagen cubra todo el fondo*/
+     width: 100%;
+  max-width: 100vw;      /* Nunca más ancho que la ventana */
+
+}

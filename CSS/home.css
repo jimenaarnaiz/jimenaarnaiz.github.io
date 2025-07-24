@@ -1,0 +1,318 @@
+/* se pone #nombre-id
+#titulo {
+    color:blueviolet;
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*para que el padding no afecte al tamaño del elemento*/
+}
+
+html {
+    font-family: "Mukta", sans-serif;
+    /*background-color: whitesmoke;*/
+    background-image: url(../imagenes/wp13326883.webp);
+    background-attachment: fixed;
+    background-size: cover; /*para que la imagen cubra todo el fondo*/
+     width: 100%;
+    max-width: 100vw;      /* Nunca más ancho que la ventana */
+
+}
+
+.header {
+    background-image: url(../imagenes/850a8eccb26046cf3f2b6a4df458db23.jpg);
+    padding: 1%;
+    display:flex; 
+    justify-content: space-between;
+    align-items: center; /*centra verticalmente*/
+}
+
+.header .saludo{
+    color: whitesmoke;
+    font-weight: 800;
+    text-align: bottom;
+    text-shadow: #b72025 1px 1px 2px, #b72025 -1px -1px 2px, #b72025 1px -1px 2px, #b72025 -1px 1px 2px;
+}
+
+.header ul {
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none; /*quita los puntos*/
+    display:flex; 
+    gap: 1.2cm;                 /* espacio entre ellos */
+    align-items: center;
+}
+
+.header ul li a{
+    font-size: 90%;
+    text-decoration: none; /*quita el subrayado*/
+    color:#b72025;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 8px 10px;
+    display: inline-block; /*necesario para q se vea siempre bien*/
+   
+}
+
+.header ul li a:hover {
+   color: #b72025;
+   /*background-color: #f8bed4;*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra al fondo */
+    font-weight: 800;
+}
+
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* espacio entre la foto y el texto */
+  margin-top: 2cm; /* centrado horizontal */
+  margin-bottom: 5%;
+}
+
+.about-me .jimena-foto {
+  display: block;         /* Necesario para que se centre con margin */
+  width: 150px;           /* Ajusta el tamaño */
+  height: 150px;          /* Igual que el ancho para círculo */
+  object-fit: cover;      /* Recorta la imagen si no es cuadrada */
+  border-radius: 50%;     /* Hace la imagen completamente redonda */
+}
+
+.about-me .about-me-info .nombre {
+    font-weight: 700;
+    font-size: 30px;
+    color: #a63a50;
+    margin-bottom: 10px; /* espacio debajo del nombre */
+}
+
+.about-me .about-me-info .descripcion {
+    color: #b72025;
+    width: 100%;
+    max-width: 550px; /* para que no se extienda demasiado */
+}
+
+.skills { /*skills*/
+    color: #a63a50;
+    font-weight: 800;
+    text-align: center;
+}
+
+.skills h2 {
+    margin-bottom: 2%; /* espacio entre el título y la lista */
+}
+
+.skills ul { 
+    list-style: none;
+    display: flex;            /* Pone los <li> en fila */
+    gap: 20px;                /* Espacio entre elementos */
+    justify-content: center;  /* Centra horizontalmente */
+    margin-bottom: 5%;
+}
+
+.skills ul li img {
+    width: 50px;              /* Ajusta el tamaño de los logos */
+    height: 50px;            
+}
+
+.skills ul li:hover img {
+    transform: scale(1.2);    /* Efecto de zoom al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.projects h1, .contact-me h1{
+    color: #a63a50;
+    font-weight: 800;
+    text-align: center;
+}
+
+.projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px; /* Espacio entre los proyectos */
+    padding: 2% 0; /* Espacio arriba y abajo */
+    width: 80%;
+    min-width: 0; /* para que no se estire demasiado en pantallas grandes */
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.quizec img, .recipeat img, .linja img, .quantik img {
+    width: 100%; /* para que ocupe todo el ancho del contenedor */
+    aspect-ratio: 1 / 1;      /* Hace la imagen cuadrada */
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+    object-fit:cover; /* para que la imagen se recorte si no es cuadrada */
+}
+
+/*cards*/
+.projects .recipeat, .projects .linja, .projects .quizec, .projects .quantik {
+    background-color: #fff0f6;
+    color: #b72025;
+    border-radius: 20px;
+}
+
+.projects .recipeat:hover,
+.projects .linja:hover,
+.projects .quizec:hover,
+.projects .quantik:hover {
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px) scale(1.03);
+    transition: all 0.3s cubic-bezier(.4,2,.6,1); /* Transición suave */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.projects .recipeat-info, .projects .linja-info, .projects .quizec-info, .projects .quantik-info{
+    padding: 3%;
+    text-align: left;
+}
+
+.recipeat-language, .linja-language, .quizec-language, .quantik-language {
+    font-size: small;
+    color: whitesmoke;
+    border-radius: 30px;
+    padding: 4px 10px;
+    margin-bottom: 3%;
+    display: inline-block;
+}
+
+.recipeat-language {
+    background-color: purple;
+}
+.linja-language {
+    background-color: #306998; 
+}
+.quizec-language {
+    background-color: purple; 
+}
+.quantik-language {
+    background-color: orange; 
+}
+
+
+.projects .recipeat h2, 
+.projects .linja h2, 
+.projects .quizec h2, 
+.projects .quantik h2 {
+    text-align:center ;
+}
+
+.contact-me {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.contact-me svg{
+    width: 24px;
+    height: 24px;
+}
+
+.contact-me:hover{
+    color: #b72025;
+}
+
+
+.contact-me-socials{
+    display: flex;         /* ← necesario para que el gap funcione */
+    justify-content: center; /* opcional: centra los íconos horizontalmente */
+    gap: 10px;
+    margin-bottom: 40px
+}
+
+
+.contact-me a:hover svg {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(749%) hue-rotate(320deg) brightness(95%) contrast(90%);
+   
+}
+
+.contact-me-card{
+    background-color: #fff0f6;
+    width: 100%;
+    max-width: 650px; /* para que no se extienda demasiado */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-me-card h3 {
+    color: #b72025;
+}
+
+.contact-me-form{
+    gap: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.contact-me-form-name-email{
+    display: flex;
+    flex-wrap: wrap; /* para que se acomoden en varias líneas si es necesario */
+    gap: 40px; /* espacio entre los campos */
+    margin-bottom: 20px; /* espacio debajo de los campos */
+    justify-content: center; /* centrado horizontal */
+}
+
+.contact-me-form-name-email div  {
+    display: flex;
+    flex-direction: column;
+    color: #a63a50;
+    font-weight: 600;
+}
+
+.contact-me-form-name-email input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-me-form-end {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-me-form-end textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none; /* para que no se pueda redimensionar */
+    margin: 0 auto; /* centrado horizontal */
+ 
+}
+
+.contact-me-form button {
+    background-color: rosybrown;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30%;
+    margin: 0 auto; /* centrado horizontal */
+    border: none; /* quita el borde */
+}
+
+
+.contact-me-form button:hover {
+    background-color: #b72025; /* cambia el color al pasar el mouse */
+    transition: background-color 0.3s ease; /* transición suave */
+
+}
+
+
