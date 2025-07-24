@@ -12,7 +12,7 @@
 html {
     font-family: "Mukta", sans-serif;
     /*background-color: whitesmoke;*/
-    background-image: url(../imagenes/wp13326883.webp);
+    background-image: url(../img/wp13326883.webp);
     background-attachment: fixed;
     background-size: cover; /*para que la imagen cubra todo el fondo*/
      width: 100%;
@@ -21,7 +21,7 @@ html {
 }
 
 .header {
-    background-image: url(../imagenes/850a8eccb26046cf3f2b6a4df458db23.jpg);
+    background-image: url(../img/850a8eccb26046cf3f2b6a4df458db23.jpg);
     padding: 1%;
     display:flex; 
     justify-content: space-between;
