@@ -7,9 +7,9 @@
 // Espera a que todo el contenido de la página esté listo
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ...código de EmailJS...
+  // ----- CONFIGURACION de EmailJS ----- 
   
-  // Seleccionamos el formulario con la clase .contact-me-form
+  // Seleccionamos el formulario
   const form = document.querySelector(".contact-me-form");
 
   // Añadimos un evento cuando el usuario intente enviar el formulario
@@ -24,13 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.textContent = "Enviando...";
 
     // Llamamos a la función de EmailJS para enviar el formulario
-    // sendForm necesita:
-    // 1. Service ID (el "servicio" de correo que creaste)
-    // 2. Template ID (la plantilla de correo)
-    // 3. El formulario como tal
+    // sendForm necesita: Service ID, Template ID y el formulario como tal
     emailjs.sendForm("service_5ynz1x3", "template_rblycyj", form)
       .then(function () {
-        // Si todo va bien
         alert("✅ ¡Correo enviado correctamente!");
 
         // Limpiamos el formulario
@@ -50,55 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // --- Slider de proyectos ---
-  /*
-   const grid = document.querySelector('.projects-grid');
-  if (!grid) return;
-  const cards = Array.from(grid.children);
-  const left = document.querySelector('.projects-arrow.left');
-  const right = document.querySelector('.projects-arrow.right');
-  let start = 0;
+ // ----- BOTÓN HAMBURGUESA -----
+    const menuButton = document.getElementById("menu");
+    const navMenu = document.getElementById("nav-menu").querySelector("ul");
 
-  function getVisible() {
-    if (window.innerWidth <= 600) return 2; // 2 en 2 en pantallas pequeñas
-    if (window.innerWidth <= 900) return 3; // 3 en 3 en medianas
-    return 4; // todas en grandes
-  }
-
-  function updateGrid() {
-    const visible = getVisible();
-    cards.forEach((card, i) => {
-      card.style.display = (i >= start && i < start + visible) ? 'block' : 'none';
+    menuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
     });
-    // Mostrar/ocultar flechas solo si hay más proyectos que visibles
-    const showArrows = cards.length > visible && window.innerWidth <= 900;
-    left && (left.style.display = showArrows ? 'block' : 'none');
-    right && (right.style.display = showArrows ? 'block' : 'none');
-  }
 
-  left && left.addEventListener('click', () => {
-    const visible = getVisible();
-    if (start > 0) {
-      start -= visible;
-      if (start < 0) start = 0;
-      updateGrid();
-    }
-  });
+    // Añadimos un evento al documento para cerrar el menú al hacer clic fuera de él
+    document.addEventListener("click", function (event) { 
+        if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
+            navMenu.classList.remove("show");
+        }
+    });
 
-  right && right.addEventListener('click', () => {
-    const visible = getVisible();
-    if (start + visible < cards.length) {
-      start += visible;
-      updateGrid();
-    }
-  });
 
-  window.addEventListener('resize', () => {
-    start = 0; // reinicia al cambiar tamaño
-    updateGrid();
-  });
-  updateGrid();
-*/
 
 
 

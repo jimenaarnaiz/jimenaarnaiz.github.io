@@ -6,7 +6,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*para que el padding no afecte al tamaño del elemento*/
+    box-sizing: border-box;
+    /*para que el padding no afecte al tamaño del elemento*/
 }
 
 html {
@@ -14,117 +15,148 @@ html {
     /*background-color: whitesmoke;*/
     background-image: url(../img/wp13326883.webp);
     background-attachment: fixed;
-    background-size: cover; /*para que la imagen cubra todo el fondo*/
-     width: 100%;
-    max-width: 100vw;      /* Nunca más ancho que la ventana */
+    background-size: cover;
+    /*para que la imagen cubra todo el fondo*/
+    width: 100%;
+    max-width: 100vw;
+    /* Nunca más ancho que la ventana */
 
 }
 
 .header {
     background-image: url(../img/850a8eccb26046cf3f2b6a4df458db23.jpg);
     padding: 1%;
-    display:flex; 
+    display: flex;
     justify-content: space-between;
-    align-items: center; /*centra verticalmente*/
+    align-items: center;
+    /*centra verticalmente*/
+    position: relative;
 }
 
-.header .saludo{
+.header .saludo {
     color: whitesmoke;
     font-weight: 800;
     text-align: bottom;
     text-shadow: #b72025 1px 1px 2px, #b72025 -1px -1px 2px, #b72025 1px -1px 2px, #b72025 -1px 1px 2px;
 }
 
+.menu {
+    display: none;
+    /* Oculto por defecto */
+}
+
 .header ul {
     margin: 0px;
     padding: 0%;
     box-sizing: border-box;
-    list-style: none; /*quita los puntos*/
-    display:flex; 
-    gap: 0.9cm;                 /* espacio entre ellos */
+    list-style: none;
+    /*quita los puntos*/
+    display: flex;
+    gap: 0.9cm;
+    /* espacio entre ellos */
     align-items: center;
 }
 
-.header ul li a{
+.header ul li a {
     font-size: 90%;
-    text-decoration: none; /*quita el subrayado*/
-    color:#b72025;
+    text-decoration: none;
+    /*quita el subrayado*/
+    color: #b72025;
     background-color: whitesmoke;
     border-radius: 30px;
     padding: 8px 10px;
-    display: inline-block; /*necesario para q se vea siempre bien*/
-   
+    display: inline-block;
+    /*necesario para q se vea siempre bien*/
 }
 
 .header ul li a:hover {
-   color: #b72025;
-   /*background-color: #f8bed4;*/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra al fondo */
+    color: #b72025;
+    /*background-color: #f8bed4;*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* sombra al fondo */
     font-weight: 800;
 }
 
 
 .about-me {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px; /* espacio entre la foto y el texto */
-  margin-top: 2cm; /* centrado horizontal */
-  margin-bottom: 5%;
-  margin-left: 2%;
-margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /* espacio entre la foto y el texto */
+    margin-top: 2cm;
+    /* centrado horizontal */
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .about-me .jimena-foto {
-  display: block;         /* Necesario para que se centre con margin */
-  width: 150px;           /* Ajusta el tamaño */
-  height: 150px;          /* Igual que el ancho para círculo */
-  object-fit: cover;      /* Recorta la imagen si no es cuadrada */
-  border-radius: 50%;     /* Hace la imagen completamente redonda */
+    display: block;
+    /* Necesario para que se centre con margin */
+    width: 150px;
+    /* Ajusta el tamaño */
+    height: 150px;
+    /* Igual que el ancho para círculo */
+    object-fit: cover;
+    /* Recorta la imagen si no es cuadrada */
+    border-radius: 50%;
+    /* Hace la imagen completamente redonda */
 }
 
 .about-me .about-me-info .nombre {
     font-weight: 700;
     font-size: 30px;
     color: #a63a50;
-    margin-bottom: 10px; /* espacio debajo del nombre */
+    margin-bottom: 10px;
+    /* espacio debajo del nombre */
 }
 
 .about-me .about-me-info .descripcion {
     color: #b72025;
     width: 100%;
-    max-width: 550px; /* para que no se extienda demasiado */
+    max-width: 550px;
+    /* para que no se extienda demasiado */
 }
 
-.skills { /*skills*/
+.skills {
+    /*skills*/
     color: #a63a50;
     font-weight: 800;
     text-align: center;
 }
 
 .skills h2 {
-    margin-bottom: 2%; /* espacio entre el título y la lista */
+    margin-bottom: 2%;
+    /* espacio entre el título y la lista */
 }
 
-.skills ul { 
+.skills ul {
     list-style: none;
-    display: flex;            /* Pone los <li> en fila */
-    gap: 20px;                /* Espacio entre elementos */
-    justify-content: center;  /* Centra horizontalmente */
+    display: flex;
+    /* Pone los <li> en fila */
+    gap: 20px;
+    /* Espacio entre elementos */
+    justify-content: center;
+    /* Centra horizontalmente */
     margin-bottom: 5%;
 }
 
 .skills ul li img {
-    width: 50px;              /* Ajusta el tamaño de los logos */
-    height: 50px;            
+    width: 50px;
+    /* Ajusta el tamaño de los logos */
+    height: 50px;
 }
 
 .skills ul li:hover img {
-    transform: scale(1.2);    /* Efecto de zoom al pasar el mouse */
-    transition: transform 0.3s ease; /* Transición suave */
+    transform: scale(1.2);
+    /* Efecto de zoom al pasar el mouse */
+    transition: transform 0.3s ease;
+    /* Transición suave */
 }
 
-.projects h1, .contact-me h1{
+.projects h1,
+.contact-me h1 {
     color: #a63a50;
     font-weight: 800;
     text-align: center;
@@ -133,14 +165,17 @@ margin-right: 2%;
 .projects .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 40px; /* Espacio entre los proyectos */
-    padding: 2% 0; /* Espacio arriba y abajo */
+    gap: 40px;
+    /* Espacio entre los proyectos */
+    padding: 2% 0;
+    /* Espacio arriba y abajo */
     width: 80%;
-    min-width: 0; /* para que no se estire demasiado en pantallas grandes */
+    min-width: 0;
+    /* para que no se estire demasiado en pantallas grandes */
     margin-left: auto;
     margin-right: auto;
-   
-  
+
+
 }
 
 
@@ -148,23 +183,33 @@ margin-right: 2%;
 @media screen and (max-width: 1100px) {
     .projects .projects-grid {
         grid-template-columns: repeat(2, minmax(120px, 200px));
-        justify-content: center; /* centra las tarjetas si hay espacio de sobra*/
+        justify-content: center;
+        /* centra las tarjetas si hay espacio de sobra*/
     }
 }
 
 
-.quizec img, .recipeat img, .linja img, .quantik img {
-    width: 100%; /* para que ocupe todo el ancho del contenedor */
-    aspect-ratio: 1 / 1;      /* Hace la imagen cuadrada */
-    height: auto; 
+.quizec img,
+.recipeat img,
+.linja img,
+.quantik img {
+    width: 100%;
+    /* para que ocupe todo el ancho del contenedor */
+    aspect-ratio: 1 / 1;
+    /* Hace la imagen cuadrada */
+    height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 20px 20px 0 0;
-    object-fit:cover; /* para que la imagen se recorte si no es cuadrada */
+    object-fit: cover;
+    /* para que la imagen se recorte si no es cuadrada */
 }
 
 /*cards*/
-.projects .recipeat, .projects .linja, .projects .quizec, .projects .quantik {
+.projects .recipeat,
+.projects .linja,
+.projects .quizec,
+.projects .quantik {
     background-color: #fff0f6;
     color: #b72025;
     border-radius: 20px;
@@ -178,16 +223,24 @@ margin-right: 2%;
     background-color: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     transform: translateY(-8px) scale(1.03);
-    transition: all 0.3s cubic-bezier(.4,2,.6,1); /* Transición suave */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: all 0.3s cubic-bezier(.4, 2, .6, 1);
+    /* Transición suave */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
 }
 
-.projects .recipeat-info, .projects .linja-info, .projects .quizec-info, .projects .quantik-info{
+.projects .recipeat-info,
+.projects .linja-info,
+.projects .quizec-info,
+.projects .quantik-info {
     padding: 3%;
     text-align: left;
 }
 
-.recipeat-language, .linja-language, .quizec-language, .quantik-language {
+.recipeat-language,
+.linja-language,
+.quizec-language,
+.quantik-language {
     font-size: small;
     color: whitesmoke;
     border-radius: 30px;
@@ -199,22 +252,25 @@ margin-right: 2%;
 .recipeat-language {
     background-color: purple;
 }
+
 .linja-language {
-    background-color: #306998; 
+    background-color: #306998;
 }
+
 .quizec-language {
-    background-color: purple; 
+    background-color: purple;
 }
+
 .quantik-language {
-    background-color: orange; 
+    background-color: orange;
 }
 
 
-.projects .recipeat h2, 
-.projects .linja h2, 
-.projects .quizec h2, 
+.projects .recipeat h2,
+.projects .linja h2,
+.projects .quizec h2,
 .projects .quantik h2 {
-    text-align:center ;
+    text-align: center;
 }
 
 .contact-me {
@@ -223,19 +279,21 @@ margin-right: 2%;
     margin-top: 5%;
 }
 
-.contact-me svg{
+.contact-me svg {
     width: 24px;
     height: 24px;
 }
 
-.contact-me:hover{
+.contact-me:hover {
     color: #b72025;
 }
 
 
-.contact-me-socials{
-    display: flex;         /* ← necesario para que el gap funcione */
-    justify-content: center; /* opcional: centra los íconos horizontalmente */
+.contact-me-socials {
+    display: flex;
+    /* ← necesario para que el gap funcione */
+    justify-content: center;
+    /* opcional: centra los íconos horizontalmente */
     gap: 10px;
     margin-bottom: 40px
 }
@@ -243,13 +301,14 @@ margin-right: 2%;
 
 .contact-me a:hover svg {
     filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(749%) hue-rotate(320deg) brightness(95%) contrast(90%);
-   
+
 }
 
-.contact-me-card{
+.contact-me-card {
     background-color: #fff0f6;
     width: 100%;
-    max-width: 650px; /* para que no se extienda demasiado */
+    max-width: 650px;
+    /* para que no se extienda demasiado */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -266,21 +325,25 @@ margin-right: 2%;
     color: #b72025;
 }
 
-.contact-me-form{
+.contact-me-form {
     gap: 20px;
     width: 80%;
     max-width: 500px;
 }
 
-.contact-me-form-name-email{
+.contact-me-form-name-email {
     display: flex;
-    flex-wrap: wrap; /* para que se acomoden en varias líneas si es necesario */
-    gap: 40px; /* espacio entre los campos */
-    margin-bottom: 20px; /* espacio debajo de los campos */
-    justify-content: center; /* centrado horizontal */
+    flex-wrap: wrap;
+    /* para que se acomoden en varias líneas si es necesario */
+    gap: 40px;
+    /* espacio entre los campos */
+    margin-bottom: 20px;
+    /* espacio debajo de los campos */
+    justify-content: center;
+    /* centrado horizontal */
 }
 
-.contact-me-form-name-email div  {
+.contact-me-form-name-email div {
     display: flex;
     flex-direction: column;
     color: #a63a50;
@@ -306,9 +369,11 @@ margin-right: 2%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    resize: none; /* para que no se pueda redimensionar */
-    margin: 0 auto; /* centrado horizontal */
- 
+    resize: none;
+    /* para que no se pueda redimensionar */
+    margin: 0 auto;
+    /* centrado horizontal */
+
 }
 
 .contact-me-form button {
@@ -319,39 +384,104 @@ margin-right: 2%;
     cursor: pointer;
     font-weight: bold;
     width: 30%;
-    margin: 0 auto; /* centrado horizontal */
-    border: none; /* quita el borde */
+    margin: 0 auto;
+    /* centrado horizontal */
+    border: none;
+    /* quita el borde */
 }
 
 
 .contact-me-form button:hover {
-    background-color: #b72025; /* cambia el color al pasar el mouse */
-    transition: background-color 0.3s ease; /* transición suave */
+    background-color: #b72025;
+    /* cambia el color al pasar el mouse */
+    transition: background-color 0.3s ease;
+    /* transición suave */
 
 }
 
 
 
 @media screen and (max-width: 600px) {
+    .header nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background-color: whitesmoke;
+        padding: 1rem 2rem;
+        gap: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 0px 0px 8px 8px;
+        width:fit-content;
+        display: none; /* Oculto por defecto */
+      
+
+    }
+
+    .header nav ul li {
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Quitar la línea del último elemento */
+    .header nav ul li:last-child {
+        border-bottom: none;
+
+    }
+
+
+    .header ul li a {
+        background-color: transparent;
+        /* Cambia el fondo a transparente */
+    }
+
+    .header ul li a:hover {
+        box-shadow: none;
+
+    }
+
+
+    .header nav ul.show {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+        /* Muestra el menú en pantallas pequeñas */
+        background-color: transparent;
+        color: whitesmoke;
+        padding: 10px 20px;
+        align-items: end;
+        justify-content: end;
+        border: none;
+        font-size: 19px;
+        cursor: pointer;
+    }
+
     .projects .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el tamaño de las tarjetas en pantallas pequeñas */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* Ajusta el tamaño de las tarjetas en pantallas pequeñas */
     }
 
     .contact-me-form-name-email {
-        gap: 20px; /* espacio entre los campos */
-    }  
+        gap: 20px;
+        /* espacio entre los campos */
+    }
 
     .contact-me-card {
-        width: 80%; 
+        width: 80%;
+    }
+
+    .contact-me-form button {
+        width: 40%;
+        /* botón ocupa todo el ancho en pantallas pequeñas */
+        white-space: nowrap;
+        /* evita que el texto se divida en varias líneas */
     }
 }
 
 @media screen and (max-width: 900px) {
     .contact-me-card {
-        width: 80%; 
+        width: 80%;
     }
-    
+
 }
-
-
-

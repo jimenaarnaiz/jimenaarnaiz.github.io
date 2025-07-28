@@ -11,6 +11,6 @@ html {
     background-attachment: fixed;
     background-size: cover; /*para que la imagen cubra todo el fondo*/
      width: 100%;
-  max-width: 100vw;      /* Nunca más ancho que la ventana */
+    max-width: 100vw;      /* Nunca más ancho que la ventana */
 
 }
