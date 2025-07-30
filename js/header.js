@@ -1,0 +1,168 @@
+class MyHeader extends HTMLElement {
+  constructor() {
+    super();
+    // Crear Shadow DOM 
+    this.attachShadow({ mode: "open" });
+  }
+
+  connectedCallback() {
+    this.shadowRoot.innerHTML = `
+      <style>
+
+      .header {
+          background-image: url(../img/850a8eccb26046cf3f2b6a4df458db23.jpg);
+          padding: 1%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          /*centra verticalmente*/
+          position: relative;
+          height: 60px;
+      }
+
+      .header .saludo {
+          color: whitesmoke;
+          font-weight: 800;
+          text-align: bottom;
+          text-shadow: #b72025 1px 1px 2px, #b72025 -1px -1px 2px, #b72025 1px -1px 2px, #b72025 -1px 1px 2px;
+      }
+
+      .menu {
+          display: none;
+          /* Oculto por defecto */
+      }
+
+      .header ul {
+          margin: 0px;
+          padding: 0%;
+          box-sizing: border-box;
+          list-style: none;
+          /*quita los puntos*/
+          display: flex;
+          gap: 0.9cm;
+          /* espacio entre ellos */
+          align-items: center;
+      }
+
+      .header ul li a {
+          font-size: 90%;
+          text-decoration: none;
+          /*quita el subrayado*/
+          color: #b72025;
+          background-color: whitesmoke;
+          border-radius: 30px;
+          padding: 8px 10px;
+          display: inline-block;
+          /*necesario para q se vea siempre bien*/
+      }
+
+      .header ul li a:hover {
+          color: #b72025;
+          /*background-color: #f8bed4;*/
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          /* sombra al fondo */
+          font-weight: 800;
+      }
+
+
+
+      @media screen and (max-width: 600px) {
+
+          .header nav ul {
+              position: absolute;
+              top: 100%;
+              right: 0;
+              flex-direction: column;
+              background-color: whitesmoke;
+              padding: 1rem 2rem;
+              gap: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+              border-radius: 0px 0px 8px 8px;
+              width: fit-content;
+              display: none;
+              /* Oculto por defecto */
+
+
+          }
+
+          .header nav ul li {
+              border-bottom: 1px solid #ccc;
+          }
+
+          /* Quitar la línea del último elemento */
+          .header nav ul li:last-child {
+              border-bottom: none;
+
+          }
+
+
+          .header ul li a {
+              background-color: transparent;
+              /* Cambia el fondo a transparente */
+          }
+
+          .header ul li a:hover {
+              box-shadow: none;
+
+          }
+
+
+          .header nav ul.show {
+              display: flex;
+          }
+
+          .menu {
+              display: block;
+              /* Muestra el menú en pantallas pequeñas */
+              background-color: transparent;
+              color: whitesmoke;
+              padding: 10px 20px;
+              align-items: end;
+              justify-content: end;
+              border: none;
+              font-size: 20px;
+              cursor: pointer;
+          }
+
+
+      }
+
+
+
+      </style>
+
+      <header class="header">
+        <h1 class="saludo">Hello world!</h1>
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact-me">Contact me</a></li>
+          </ul>
+        </nav>
+        <button class="menu" id="menu">&#9776;</button>
+      </header>
+    `;
+
+    const menuButton = this.shadowRoot.getElementById("menu");
+    const navMenu = this.shadowRoot.getElementById("nav-menu").querySelector("ul");
+
+    menuButton.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+   document.addEventListener("click", (event) => {
+    const path = event.composedPath();
+    if (!path.includes(menuButton) && !path.includes(navMenu)) {
+      navMenu.classList.remove("show");
+    }
+  });
+
+
+    
+  }
+}
+
+customElements.define("my-header", MyHeader);

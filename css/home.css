@@ -225,30 +225,11 @@ html {
     margin-top: 5%;
 }
 
-.contact-me svg {
-    width: 24px;
-    height: 24px;
-}
 
 .contact-me:hover {
     color: #b72025;
 }
 
-
-.contact-me-socials {
-    display: flex;
-    /* ← necesario para que el gap funcione */
-    justify-content: center;
-    /* opcional: centra los íconos horizontalmente */
-    gap: 10px;
-    margin-bottom: 40px
-}
-
-
-.contact-me a:hover svg {
-    filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(749%) hue-rotate(320deg) brightness(95%) contrast(90%);
-
-}
 
 .contact-me-card {
     background-color: #fff0f6;
@@ -345,6 +326,35 @@ html {
 
 }
 
+footer {
+    background-color: rgba(74, 26, 36, 0.70); 
+    text-align: center;
+    margin-top: 50px;
+    color: whitesmoke;
+    font-weight: 600;
+    gap: 25px;
+    padding-top: 1rem;
+    font-size: 14px;
+}
+
+.contact-me-socials {
+    display: flex;
+    /* ← necesario para que el gap funcione */
+    justify-content: center;
+    /* opcional: centra los íconos horizontalmente */
+    gap: 10px;
+
+}
+
+
+.contact-me-socials a:hover svg {
+    filter: brightness(0.8);
+}
+
+.contact-me-socials svg {
+    width: 24px;
+    height: 24px;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -353,7 +363,7 @@ html {
     }
 
     .projects .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
         /* Ajusta el tamaño de las tarjetas en pantallas pequeñas */
     }
 
