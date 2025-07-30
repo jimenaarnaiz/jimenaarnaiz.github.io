@@ -1,3 +1,5 @@
+  // ----- CONFIGURACION de EmailJS ----- 
+
 // Esta función se ejecuta al cargar el archivo.
 // Inicializa EmailJS
 (function () {
@@ -6,8 +8,6 @@
 
 // Espera a que todo el contenido de la página esté listo
 document.addEventListener("DOMContentLoaded", function () {
-
-  // ----- CONFIGURACION de EmailJS ----- 
   
   // Seleccionamos el formulario
   const form = document.querySelector(".contact-me-form");
@@ -46,21 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
- // ----- BOTÓN HAMBURGUESA -----
-    const menuButton = document.getElementById("menu");
-    const navMenu = document.getElementById("nav-menu").querySelector("ul");
-
-    menuButton.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-    });
-
-    // Añadimos un evento al documento para cerrar el menú al hacer clic fuera de él
-    document.addEventListener("click", function (event) { 
-        if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
-            navMenu.classList.remove("show");
-        }
-    });
-
+ 
 
 
 
