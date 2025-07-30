@@ -332,9 +332,9 @@ footer {
     margin-top: 50px;
     color: whitesmoke;
     font-weight: 600;
-    gap: 25px;
     padding-top: 1rem;
     font-size: 14px;
+
 }
 
 .contact-me-socials {
@@ -343,9 +343,8 @@ footer {
     justify-content: center;
     /* opcional: centra los íconos horizontalmente */
     gap: 10px;
-
+    margin-bottom: 10px;
 }
-
 
 .contact-me-socials a:hover svg {
     filter: brightness(0.8);
