@@ -10,7 +10,7 @@ class MyHeader extends HTMLElement {
       <style>
 
       .header {
-          background-image: url(../img/850a8eccb26046cf3f2b6a4df458db23.jpg);
+          background-color: var(--color-primary);
           padding: 1%;
           padding-left: 1rem;
           padding-right: 1rem;
@@ -23,10 +23,11 @@ class MyHeader extends HTMLElement {
       }
 
       .header .saludo {
-          color: whitesmoke;
+          color: var(--color-bg);
           font-weight: 800;
           text-align: bottom;
-          text-shadow: #b72025 1px 1px 2px, #b72025 -1px -1px 2px, #b72025 1px -1px 2px, #b72025 -1px 1px 2px;
+          font-size: 1.5rem;
+    
       }
 
       .menu {
@@ -41,17 +42,17 @@ class MyHeader extends HTMLElement {
           list-style: none;
           /*quita los puntos*/
           display: flex;
-          gap: 0.9cm;
+          gap: 1rem;
           /* espacio entre ellos */
           align-items: center;
       }
 
       .header ul li a {
-          font-size: 90%;
+          font-size: 100%;
           text-decoration: none;
           /*quita el subrayado*/
-          color: #b72025;
-          background-color: whitesmoke;
+          color: var(--color-bg);
+
           border-radius: 30px;
           padding: 8px 10px;
           display: inline-block;
@@ -59,11 +60,11 @@ class MyHeader extends HTMLElement {
       }
 
       .header ul li a:hover {
-          color: #b72025;
-          /*background-color: #f8bed4;*/
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-          /* sombra al fondo */
+          color: var(--color-bg);
           font-weight: 800;
+         border: 1px solid var(--color-bg);
+        
+         
       }
 
 
@@ -75,39 +76,39 @@ class MyHeader extends HTMLElement {
               top: 100%;
               right: 0;
               flex-direction: column;
-              background-color: whitesmoke;
               padding: 1rem 2rem;
+              background-color: whitesmoke;
               gap: 15px;
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
               border-radius: 0px 0px 8px 8px;
               width: fit-content;
               display: none;
               /* Oculto por defecto */
-
-
+             
           }
 
           .header nav ul li {
               border-bottom: 1px solid #ccc;
+  
           }
 
           /* Quitar la línea del último elemento */
           .header nav ul li:last-child {
               border-bottom: none;
-
           }
-
 
           .header ul li a {
               background-color: transparent;
               /* Cambia el fondo a transparente */
+              color: var(--color-primary);
           }
 
           .header ul li a:hover {
-              box-shadow: none;
+              border: none;
+              text-style: bold;
+              color: var(--color-primary);
 
           }
-
 
           .header nav ul.show {
               display: flex;
@@ -117,7 +118,7 @@ class MyHeader extends HTMLElement {
               display: block;
               /* Muestra el menú en pantallas pequeñas */
               background-color: transparent;
-              color: whitesmoke;
+              color: var(--color-bg);
               padding: 10px 20px;
               align-items: end;
               justify-content: end;
@@ -134,7 +135,7 @@ class MyHeader extends HTMLElement {
       </style>
 
       <header class="header">
-        <h1 class="saludo">Hello world!</h1>
+        <h1 class="saludo">Portfolio</h1>
         <nav id="nav-menu">
           <ul>
             <li><a href="#about-me">About me</a></li>
@@ -145,6 +146,7 @@ class MyHeader extends HTMLElement {
         <button class="menu" id="menu">&#9776;</button>
       </header>
     `;
+
 
     const menuButton = this.shadowRoot.getElementById("menu");
     const navMenu = this.shadowRoot.getElementById("nav-menu").querySelector("ul");

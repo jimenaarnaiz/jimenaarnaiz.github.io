@@ -3,6 +3,13 @@
     color:blueviolet;
 }*/
 
+
+/**
+    * #f5a1b1 rosa
+    #f8bed4 rosa claro
+    #a80b1e rojo
+    */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +17,17 @@
     /*para que el padding no afecte al tamaño del elemento*/
 }
 
+:root {
+  --color-bg: #FFE6EF;          /* fondo general */
+  --color-primary: rgb(175, 49, 95);     /* rojo burdeos elegante */
+  --color-secondary: #c94f7c     ;   /* rosa suave, acentos */
+  --color-text: #6b0036;        /* gris oscuro para texto */
+}
+
 html {
     font-family: "Mukta", sans-serif;
-    /*background-color: whitesmoke;*/
-    background-image: url(../img/wp13326883.webp);
+    background-color: var(--color-bg);
+    /*background-image: url(../img/55044d7dbeb90a8a32c8be0522acf489.jpg);*/
     background-attachment: fixed;
     background-size: cover;
     /*para que la imagen cubra todo el fondo*/
@@ -31,9 +45,9 @@ html {
     /* espacio entre la foto y el texto */
     margin-top: 3rem;
     /* centrado horizontal */
-    margin-bottom: 5%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-bottom: 3rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .about-me .jimena-foto {
@@ -52,13 +66,13 @@ html {
 .about-me .about-me-info .nombre {
     font-weight: 700;
     font-size: 30px;
-    color: #a63a50;
+    color: var(--color-primary);
     margin-bottom: 10px;
     /* espacio debajo del nombre */
 }
 
 .about-me .about-me-info .descripcion {
-    color: #b72025;
+    color: var(--color-text);
     width: 100%;
     max-width: 550px;
     /* para que no se extienda demasiado */
@@ -66,7 +80,7 @@ html {
 
 .skills {
     /*skills*/
-    color: #a63a50;
+    color: var(--color-primary);
     font-weight: 800;
     text-align: center;
 }
@@ -85,6 +99,8 @@ html {
     justify-content: center;
     /* Centra horizontalmente */
     margin-bottom: 5%;
+    margin-left: 1.2rem;
+     margin-right: 1.2rem;
 }
 
 .skills ul li img {
@@ -103,7 +119,7 @@ html {
 
 .projects h1,
 .contact-me h1 {
-    color: #a63a50;
+    color: var(--color-primary);
     font-weight: 800;
     text-align: center;
 }
@@ -156,8 +172,8 @@ html {
 .projects .linja,
 .projects .quizec,
 .projects .quantik {
-    background-color: #fff0f6;
-    color: #b72025;
+    background-color: white;
+    color: var(--color-secondary);
     border-radius: 20px;
 }
 
@@ -211,7 +227,6 @@ html {
     background-color: orange;
 }
 
-
 .projects .recipeat h2,
 .projects .linja h2,
 .projects .quizec h2,
@@ -219,10 +234,11 @@ html {
     text-align: center;
 }
 
+
+
 .contact-me {
     text-align: center;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 4rem;
 }
 
 
@@ -249,13 +265,14 @@ html {
 
 
 .contact-me-card h3 {
-    color: #b72025;
+    color: var(--color-primary);
 }
 
 .contact-me-form {
     gap: 20px;
     width: 80%;
     max-width: 500px;
+    margin: 0 auto;
 }
 
 .contact-me-form-name-email {
@@ -271,10 +288,11 @@ html {
 }
 
 .contact-me-form-name-email div {
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    color: #a63a50;
-    font-weight: 600;
+    color: var(--color-secondary);
+    font-weight: 600;  
 }
 
 .contact-me-form-name-email input {
@@ -282,6 +300,7 @@ html {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    
 }
 
 .contact-me-form-end {
@@ -292,7 +311,7 @@ html {
 
 .contact-me-form-end textarea {
     width: 100%;
-    height: 100px;
+    height: 150px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -300,6 +319,7 @@ html {
     /* para que no se pueda redimensionar */
     margin: 0 auto;
     /* centrado horizontal */
+    font-family: "Mukta", sans-serif;
 
 }
 
@@ -319,7 +339,7 @@ html {
 
 
 .contact-me-form button:hover {
-    background-color: #b72025;
+    background-color: var(--color-secondary);
     /* cambia el color al pasar el mouse */
     transition: background-color 0.3s ease;
     /* transición suave */
@@ -327,9 +347,9 @@ html {
 }
 
 footer {
-    background-color: rgba(74, 26, 36, 0.70); 
+    background-color: rgb(175, 49, 95, 0.7); /*rgba(74, 26, 36, 0.70);/*8B1E3F*/
     text-align: center;
-    margin-top: 50px;
+    margin-top: 6rem;
     color: whitesmoke;
     font-weight: 600;
     padding-top: 1rem;
@@ -343,7 +363,7 @@ footer {
     justify-content: center;
     /* opcional: centra los íconos horizontalmente */
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .contact-me-socials a:hover svg {
@@ -357,6 +377,24 @@ footer {
 
 
 @media screen and (max-width: 600px) {
+    .about-me{
+        flex-direction: column;
+        /* Cambia a columna en pantallas pequeñas */
+        align-items: center;
+        /* Centra los elementos */
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .about-me-info .nombre{
+        text-align: center;
+    }
+
+    .about-me-info .descripcion {
+        text-align: justify;
+        /* Centra el texto en pantallas pequeñas */   
+    }
+
     .skills ul {
         flex-wrap: wrap; /* Permite que los logos se acomoden en varias líneas si es necesario */
     }
@@ -369,10 +407,6 @@ footer {
     .contact-me-form-name-email {
         gap: 20px;
         /* espacio entre los campos */
-    }
-
-    .contact-me-card {
-        width: 80%;
     }
 
     .contact-me-form button {

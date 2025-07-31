@@ -1,10 +1,9 @@
 /*** Header CSS ***/
 
 .header {
-    background-image: url(../img/850a8eccb26046cf3f2b6a4df458db23.jpg);
-    padding: 1%;
+    /*background-image: url(../img/850a8eccb26046cf3f2b6a4df458db23.jpg);*/
+    background-color: whitesmoke;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     /*centra verticalmente*/
     position: relative;
@@ -29,7 +28,7 @@
     list-style: none;
     /*quita los puntos*/
     display: flex;
-    gap: 0.9cm;
+    gap: 1rem;
     /* espacio entre ellos */
     align-items: center;
 }
@@ -60,19 +59,13 @@
 
     .header nav ul {
         position: absolute;
-        top: 100%;
-        right: 0;
         flex-direction: column;
         background-color: whitesmoke;
-        padding: 1rem 2rem;
-        gap: 15px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         border-radius: 0px 0px 8px 8px;
         width: fit-content;
         display: none;
         /* Oculto por defecto */
-
-
     }
 
     .header nav ul li {
@@ -82,7 +75,6 @@
     /* Quitar la línea del último elemento */
     .header nav ul li:last-child {
         border-bottom: none;
-
     }
 
 
@@ -96,7 +88,6 @@
 
     }
 
-
     .header nav ul.show {
         display: flex;
     }
@@ -106,11 +97,8 @@
         /* Muestra el menú en pantallas pequeñas */
         background-color: transparent;
         color: whitesmoke;
-        padding: 10px 20px;
-        align-items: end;
-        justify-content: end;
         border: none;
-        font-size: 19px;
+        font-size: 20px;
         cursor: pointer;
     }
 
