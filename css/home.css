@@ -327,35 +327,6 @@
 
 }
 
-footer {
-    background-color: rgb(175, 49, 95, 0.7);
-    /*rgba(74, 26, 36, 0.70);/*8B1E3F*/
-    text-align: center;
-    margin-top: 6rem;
-    color: whitesmoke;
-    font-weight: 600;
-    padding-top: 1rem;
-    font-size: 14px;
-
-}
-
-.contact-me-socials {
-    display: flex;
-    /* ← necesario para que el gap funcione */
-    justify-content: center;
-    /* opcional: centra los íconos horizontalmente */
-    gap: 10px;
-    margin-bottom: 1rem;
-}
-
-.contact-me-socials a:hover svg {
-    filter: brightness(0.8);
-}
-
-.contact-me-socials svg {
-    width: 24px;
-    height: 24px;
-}
 
 
 @media screen and (max-width: 600px) {
