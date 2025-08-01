@@ -130,9 +130,8 @@ class MyHeader extends HTMLElement {
 
       }
 
-
-
       </style>
+
 
       <header class="header">
         <h1 class="saludo">Portfolio</h1>
@@ -148,6 +147,7 @@ class MyHeader extends HTMLElement {
     `;
 
 
+    /*    Funcionalidad botón de menú */
     const menuButton = this.shadowRoot.getElementById("menu");
     const navMenu = this.shadowRoot.getElementById("nav-menu").querySelector("ul");
 
