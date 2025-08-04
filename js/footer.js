@@ -10,8 +10,7 @@ class MyFooter extends HTMLElement {
         <style>
 
         footer {
-            background-color: rgba(175, 49, 95, 0.7);
-            /*rgba(74, 26, 36, 0.70);/*8B1E3F*/
+            background-color: var(--color-footer-bg);
             text-align: center;
             margin-top: 6rem;
             color: whitesmoke;

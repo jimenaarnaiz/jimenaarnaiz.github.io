@@ -6,6 +6,7 @@
 }
 
 :root {
+    --color-footer-bg: #af315fb3;
     --color-bg: #FFE6EF;
     /* fondo general */
     --color-primary: rgb(175, 49, 95);
@@ -13,10 +14,34 @@
     --color-secondary: #c94f7c;
     /* rosa suave, acentos */
     --color-tertiary: rgb(156, 0, 60);
+    --color-4: rgb(156, 0, 60, 0.7);
     /* rosa claro, para detalles */
     --color-text: #6b0036;
     /* gris oscuro para texto */
+    --color-contact-card-title: var(--color-tertiary); 
+    --color-contact-card-text: var(--color-primary);
+    --color-contact-card-bg: #eacdd8;
+    --color-disabled: rosybrown;
+    --color-button: var(--color-secondary);
 }
+
+body.dark-mode {
+    --color-footer-bg: #ff7caa92;
+    --color-bg: #121212; /* fondo oscuro real */
+    --color-primary: #FF7CA9; /* rosa intenso elegante */
+    --color-secondary: #d14b7f; /* rosa intermedio */
+    --color-tertiary: #9c003c; /* detalles más oscuros */
+    --color-4: rgba(255, 140, 180, 0.739); /* translúcido suave */
+    --color-text: #f8dce6; /* texto rosado claro */
+    --color-contact-card-bg: var(--color-primary); /* fondo para contacto, burdeos profundo */
+    --color-contact-card-title: var(--color-bg); /* texto claro en contacto */
+    --color-contact-card-text: var(--color-bg); /* texto claro en contacto */
+    --color-disabled: #974861; /* gris claro para botones deshabilitados */
+    --color-button: #5a2b3a ; /* rosa intermedio para botones */
+    
+    background-color: var(--color-bg);
+    color: var(--color-text);
+} 
 
 html {
     font-family: "Mukta", sans-serif;
