@@ -46,7 +46,7 @@
 .about-me .about-me-info .engineer {
     font-weight: 600;
     font-size: 18px;
-    color: whitesmoke;
+    color: var(--color-bg);
     margin-bottom: 1rem;
     /* espacio debajo del título */
     background-color: var(--color-4);
@@ -281,8 +281,11 @@
     width: 100%;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: whitesmoke;
+    border: 1.5px solid;
+    background-color: var(--color-input-bg);
+    color: whitesmoke;
+    border-color: var(--color-border);
+
 
 }
 
@@ -297,19 +300,22 @@
     height: 150px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1.5px solid var(--color-border);
     resize: none;
     /* para que no se pueda redimensionar */
     margin: 0 auto;
     /* centrado horizontal */
     font-family: "Mukta", sans-serif;
-    background-color: whitesmoke;
+    background-color: var(--color-input-bg);
+    color: whitesmoke;
+   
+
 
 }
 
 .contact-me-form button {
     background-color: var(--color-disabled);
-    color: white;
+    color: whitesmoke;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
