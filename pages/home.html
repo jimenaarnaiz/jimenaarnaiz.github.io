@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Asegura que la página se vea bien en dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Asegura que la página se vea bien en dispositivos móviles-->
 
     <title>My first web page!</title>
     <link rel="stylesheet" href="../css/styles.css" />
@@ -11,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet"/>
+        rel="stylesheet" />
 </head>
 
 
@@ -31,23 +32,52 @@
                 </div>
                 <h1 class="nombre">Jimena Arnaiz González</h1>
                 <h2 class="engineer">Software Engineer</h2>
-                <p class="descripcion">I am especially interested in <span class="web">web development</span> and <span class="android">Android app development</span>. I adapt quickly to new environments and technologies, driven by a strong motivation to continuously learn and deepen my knowledge across various areas of Computer Science.
-
+                <p class="descripcion">I am especially interested in <span class="web">web development</span> and <span
+                        class="android">Android app development</span>. I adapt quickly to new environments and
+                    technologies, driven by a strong motivation to continuously learn and deepen my knowledge across
+                    various areas of Computer Science.
                 </p>
             </div>
         </section>
 
         <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <!-- <li><img src="img/java.svg" alt="Java logo"></li>  -->
-                <li><img src="../img/python.svg" alt="Python logo"></li>
-                <li><img src="../img/kotlin.svg" alt="Kotlin logo"></li>
-                <li><img src="../img/postgresql.svg" alt="PostgreSQL logo"></li>
-                <li><img src="../img/c.svg" alt="C logo"></li>
-                <li><img src="../img/html5.svg" alt="HTML logo"></li>
-                <li><img src="../img/csswizardry.svg" alt="css logo"></li>
-            </ul>
+            <div class="skills-lan">
+                <h2>Skills</h2>
+                <div class="skills-scroll">
+                    <div class="skills-track">
+                        <ul>
+                            <li><img src="../img/python-svgrepo-com.svg" alt="Python logo"></li>
+                            <li><img src="../img/kotlin-svgrepo-com.svg" alt="Kotlin logo"></li>
+                            <li><img src="../img/java-svgrepo-com.svg" alt="Java logo"></li>
+                            <li><img src="../img/c.svg" alt="C logo"></li>
+                            <li><img src="../img/postgresql-svgrepo-com.svg" alt="PostgreSQL logo"></li>
+                            <li><img src="../img/html-5-svgrepo-com.svg" alt="HTML logo"></li>
+                            <li><img src="../img/css-3-svgrepo-com.svg" alt="css logo"></li>
+
+                            <!-- duplicados para animación infinita sin cortes -->
+                            <li><img src="../img/python-svgrepo-com.svg" alt="Python logo"></li>
+                            <li><img src="../img/kotlin-svgrepo-com.svg" alt="Kotlin logo"></li>
+                            <li><img src="../img/java-svgrepo-com.svg" alt="Java logo"></li>
+                            <li><img src="../img/c.svg" alt="C logo"></li>
+                            <li><img src="../img/postgresql-svgrepo-com.svg" alt="PostgreSQL logo"></li>
+                            <li><img src="../img/html-5-svgrepo-com.svg" alt="HTML logo"></li>
+                            <li><img src="../img/css-3-svgrepo-com.svg" alt="CSS logo"></li>
+                        </ul>
+                    </div>´
+                </div>
+
+
+            </div>
+            <div class="skills-tools">
+                <h2>Tools</h2>
+                <ul>
+                    <li><img src="../img/git-svgrepo-com.svg" alt="GitHub logo"></li>
+                    <li><img src="../img/visual-studio-code-svgrepo-com.svg" alt="Visual Studio Code logo"></li>
+                    <li><img src="../img/eclipse-icon-svgrepo-com.svg" alt="Eclipse logo"></li>
+                    <li><img src="../img/logo-google-android-studio-svgrepo-com.svg" alt="Android Studio logo"></li>
+                    <li><img src="../img/firebase-svgrepo-com.svg" alt="IntelliJ IDEA logo"></li>
+                </ul>
+            </div>
         </section>
 
         <section id="projects" class="projects">
@@ -109,7 +139,7 @@
         </section>
 
         <section id="contact-me" class="contact-me">
-    
+
             <div class="contact-me-card">
                 <h3 class="contact-me-text">Let’s get in touch!</h3>
 
@@ -144,8 +174,8 @@
 
     <!--archivo JavaScript  -->
     <script src="../js/scripts.js"></script>
-   <script src="../js/header-home.js" defer></script>
-   <script src="../js/footer.js" defer></script>
+    <script src="../js/header-home.js" defer></script>
+    <script src="../js/footer.js" defer></script>
 
 </body>
 

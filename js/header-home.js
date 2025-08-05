@@ -89,7 +89,7 @@ class MyHeader extends HTMLElement {
               right: 0;
               flex-direction: column;
               padding: 1rem 2rem;
-              background-color: whitesmoke;
+              background-color: var(--color-nav-menu-bg);
               gap: 15px;
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
               border-radius: 0px 0px 8px 8px;

@@ -21,29 +21,36 @@
     --color-contact-card-title: var(--color-bg); 
     --color-contact-card-text: whitesmoke;
     --color-contact-card-bg: var(--color-4);
-    --color-disabled: rosybrown;
+    --color-disabled: rgb(188, 143, 162);
     --color-button: var(--color-text);
     --color-input-bg: whitesmoke;
     --color-border: var(--color-text); /* borde de entrada oscuro */
+    --color-nav-menu-bg: whitesmoke;
+    --color-cards-bg: whitesmoke; /* fondo de tarjetas */
+   
 }
 
 body.dark-mode {
-    --color-footer-bg: #3a1c2b;
+    --color-footer-bg: #4f263a;
     --color-bg: #2c131c; /* fondo oscuro real */
     --color-primary: #FF7CA9; /* rosa intenso elegante */
     --color-secondary: #b7436f; /* rosa intermedio */
     --color-tertiary: #9c003c; /* detalles más oscuros */
-    --color-4: rgba(255, 140, 180, 0.739); /* translúcido suave */
+    --color-4: #ff8cb4bc; /* translúcido suave */
     --color-text: #f8dce6; /* texto rosado claro */
     --color-contact-card-bg: var(--color-4); /* fondo para contacto, burdeos profundo */
-    --color-contact-card-title: var(--color-bg); /* texto claro en contacto */
+    --color-contact-card-title: var(--color-text); /* texto claro en contacto */
     --color-contact-card-text: var(--color-bg); /* texto claro en contacto */
     --color-disabled: #522e3895; /* gris claro para botones deshabilitados */
     --color-button: #60263a ; /* rosa intermedio para botones */
     --color-input-bg: var(--color-bg); /* fondo de entrada oscuro */
     --color-border: #ffa2c4; /* borde de entrada oscuro */
+    --color-nav-menu-bg: var(--color-disabled); /* fondo del menú de navegación oscuro */
+    --color-cards-bg: var(--color-text); /* fondo de tarjetas oscuro */
+
     background-color: var(--color-bg);
     color: var(--color-text);
+
 } 
 
 html {

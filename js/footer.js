@@ -30,7 +30,7 @@ class MyFooter extends HTMLElement {
             /* necesario para que el gap funcione */
             justify-content: center;
             /* centra los íconos horizontalmente */
-            gap: 10px;
+            gap: 18px;
             margin-bottom: 1rem;
         }
 
