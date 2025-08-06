@@ -39,8 +39,8 @@ body.dark-mode {
     --color-4: #ff8cb4bc; /* translúcido suave */
     --color-text: #f8dce6; /* texto rosado claro */
     --color-contact-card-bg: var(--color-4); /* fondo para contacto, burdeos profundo */
-    --color-contact-card-title: var(--color-text); /* texto claro en contacto */
-    --color-contact-card-text: var(--color-bg); /* texto claro en contacto */
+    --color-contact-card-title: whitesmoke; /* texto claro en contacto */
+    --color-contact-card-text: var(--color-text); /* texto claro en contacto */
     --color-disabled: #522e3895; /* gris claro para botones deshabilitados */
     --color-button: #60263a ; /* rosa intermedio para botones */
     --color-input-bg: var(--color-bg); /* fondo de entrada oscuro */

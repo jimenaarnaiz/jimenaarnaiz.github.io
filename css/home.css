@@ -312,7 +312,7 @@
     width: 100%;
     padding: 5px;
     border-radius: 5px;
-    border: 1.5px solid;
+    border: 1px solid;
     background-color: var(--color-input-bg);
     color: whitesmoke;
     border-color: var(--color-border);
@@ -331,7 +331,7 @@
     height: 150px;
     padding: 10px;
     border-radius: 5px;
-    border: 1.5px solid var(--color-border);
+    border: 1px solid var(--color-border);
     resize: none;
     /* para que no se pueda redimensionar */
     margin: 0 auto;
