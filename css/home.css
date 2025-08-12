@@ -98,6 +98,7 @@
 }
 
 .skills,
+.skills-tools,
 .projects h1,
 .contact-me h1 {
     color: var(--color-primary);
