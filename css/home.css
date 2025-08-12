@@ -315,7 +315,7 @@
     border-radius: 5px;
     border: 1px solid;
     background-color: var(--color-input-bg);
-    color: whitesmoke;
+    color: var(--color-text);
     border-color: var(--color-border);
 
 
@@ -339,7 +339,7 @@
     /* centrado horizontal */
     font-family: "Mukta", sans-serif;
     background-color: var(--color-input-bg);
-    color: whitesmoke;
+    color: var(--color-text);
 
 
 
