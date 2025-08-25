@@ -45,7 +45,7 @@ body.dark-mode {
     --color-button: #60263a ; /* rosa intermedio para botones */
     --color-input-bg: var(--color-bg); /* fondo de entrada oscuro */
     --color-border: #ffa2c4; /* borde de entrada oscuro */
-    --color-nav-menu-bg: var(--color-disabled); /* fondo del menú de navegación oscuro */
+    --color-nav-menu-bg: #522e38; /* fondo del menú de navegación oscuro */
     --color-cards-bg: var(--color-text); /* fondo de tarjetas oscuro */
 
     background-color: var(--color-bg);
