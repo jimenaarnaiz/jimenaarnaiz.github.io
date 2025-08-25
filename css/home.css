@@ -9,7 +9,7 @@
     align-items: center;
     gap: 70px;
     /* espacio entre la foto y el texto */
-    margin-top: 3rem;
+    margin-top: 5rem;
     /* centrado horizontal */
     margin-bottom: 3.5rem;
     margin-left: 1.5rem;
@@ -34,16 +34,27 @@
 .about-me-saludo {
     color: var(--color-text);
     font-size: smaller;
+    position: relative; /* necesario para ::after */
 }
 
 .about-me .about-me-info .nombre {
     font-weight: 700;
     font-size: 30px;
     color: var(--color-primary);
-
 }
 
+.about-me-title::after {
+    content: "_";               /* el guion bajo */
+    animation: blink 1.2s step-start infinite;
+    color: var(--color-text);
+    margin-left: 2px;           /* espacio entre el nombre y el guion */
+}
 
+/* Animación parpadeante */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
 
 
 .about-me .about-me-info .engineer {
@@ -68,34 +79,163 @@
 
 }
 
-.education {
+.about-me{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/******************************* Educación */
+.education{
     margin-top: 2rem;
     color: var(--color-text);
     text-align: center;
+    position: relative;
 }
 
-.education-info{
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    /* espacio entre los elementos */
-    align-items: center;
-    /* centra los elementos horizontalmente */
-}
-
-.education p{
+.education p, .experience p{
     font-style: italic;
     font-size: 14px;
     font-weight: 600;
 
 }
 
-.education h4{
+.education h4, .experience h4 {
     color: var(--color-primary);
     font-weight: 800;
     font-size: 17px;
 }
+
+.education-info {
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* espacio entre los elementos */
+    text-align: left;
+
+}
+
+.experience-info{
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* espacio entre los elementos */
+    text-align: righ;
+}
+
+/**
+/* Línea vertical central */
+.education-info::before, .experience-info::before {
+    content: "";
+    position: absolute;
+    left: 30%; /* Centra la línea */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    z-index: 0;
+    transform: translateX(-50%);  /* Centra la línea */
+}
+
+
+/* Cada item de la línea del tiempo */
+.education-item, .experience-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 1rem; /* Un pequeño padding para separar del borde */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    display: flex;
+    align-items: flex-start; /* Alinea el punto y el texto verticalmente */
+    gap: 20px; /* Espacio entre el punto y el texto */
+    padding-left: 31rem;
+    
+}
+
+/* Punto en la línea */
+.education-dot, .experience-dot {
+    position: absolute;
+    left: 30%; /* Se alinea con la línea vertical */
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    border: 3px solid var(--color-bg);
+    transition: transform 0.3s ease;
+    transform: translateX(-50%); /* Centra el punto sobre la línea */
+    z-index: 1; /* Asegura que el punto esté encima de la línea */
+}
+
+.education-item:hover .education-dot, .experience-item:hover .experience-dot {
+  transform: scale(1.2);
+  background-color: var(--color-secondary);
+}
+
+
+
+/*****************************
+    * DERECHA */
+/* Línea vertical central */
+.experience-info::after {
+    content: "";
+    position: absolute;
+    right: 30%; /* Centra la línea */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    z-index: 0;
+    transform: translateX(-50%);  /* Centra la línea */
+}
+
+/* Cada item de la línea del tiempo */
+.experience-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-right: 1rem; /* Un pequeño padding para separar del borde */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    display: flex;
+    align-items: flex-end; /* Alinea el punto y el texto verticalmente */
+    gap: 20px; /* Espacio entre el punto y el texto */
+    padding-right: 31rem;
+    
+}
+
+.experience-dot {
+    position: absolute;
+    right: 30%; /* Se alinea con la línea vertical */
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    border: 3px solid var(--color-bg);
+    transition: transform 0.3s ease;
+    transform: translateX(-50%); /* Centra el punto sobre la línea */
+    z-index: 1; /* Asegura que el punto esté encima de la línea */
+}
+
+/****************++++
+
+/************SKILLS***********/
 
 
 .skills-tools ul {
@@ -129,7 +269,8 @@
 .skills-tools,
 .projects h1,
 .contact-me h1,
-.education h1 {
+.education h1,
+.experience h1 {
     color: var(--color-primary);
     font-weight: 800;
     text-align: center;
@@ -464,6 +605,30 @@
         /* Centra el texto en pantallas pequeñas */
     }
 
+    .education-info, .experience-info {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        /* para que no se extienda demasiado */
+    
+    }
+
+    .education-info::before, .experience-info::before {
+        left: 7%;
+        /* Centra la línea */
+    }
+
+    .education-item, .experience-item {
+        padding-left: 4rem;
+        /* Un pequeño padding para separar del borde */
+        margin-bottom: 2rem;
+        text-align: left;
+
+    }
+
+    .education-dot, .experience-dot {
+        left: 7%;
+        /* Se alinea con la línea vertical */
+    }
 
     .skills-lan ul {
         gap: 1.5rem;

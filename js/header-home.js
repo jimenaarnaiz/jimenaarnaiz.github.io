@@ -96,6 +96,7 @@ class MyHeader extends HTMLElement {
               width: fit-content;
               display: none;
               /* Oculto por defecto */
+              z-index: 9999;     /* <-- asegura que va por encima */
              
           }
 
