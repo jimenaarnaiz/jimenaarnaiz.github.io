@@ -137,7 +137,7 @@
 
 /**
 /* Línea vertical central */
-.education-info::before, .experience-info::before {
+.education-info::before{
     content: "";
     position: absolute;
     left: 30%; /* Centra la línea */
@@ -152,7 +152,7 @@
 
 
 /* Cada item de la línea del tiempo */
-.education-item, .experience-item {
+.education-item {
     position: relative;
     margin-bottom: 2.5rem;
     padding-left: 1rem; /* Un pequeño padding para separar del borde */
@@ -167,7 +167,7 @@
 }
 
 /* Punto en la línea */
-.education-dot, .experience-dot {
+.education-dot{
     position: absolute;
     left: 30%; /* Se alinea con la línea vertical */
     top: 0;
@@ -188,52 +188,54 @@
 
 
 
-/*****************************
-    * DERECHA */
-/* Línea vertical central */
-.experience-info::after {
+/* Línea vertical para experiencia */
+.experience-info::before {
     content: "";
     position: absolute;
-    right: 30%; /* Centra la línea */
+    left: 70%; /* línea cerca de la derecha */
     top: 0;
     bottom: 0;
     width: 4px;
     background-color: var(--color-primary);
     border-radius: 2px;
     z-index: 0;
-    transform: translateX(-50%);  /* Centra la línea */
+    transform: translateX(-50%); /* centra la línea sobre ese 70% */
 }
 
-/* Cada item de la línea del tiempo */
+/* Cada item de experiencia */
 .experience-item {
     position: relative;
     margin-bottom: 2.5rem;
-    padding-right: 1rem; /* Un pequeño padding para separar del borde */
+    padding-left: 0; /* no necesitamos padding izquierdo */
+    padding-right: calc(100% - 70% + 2rem); /* separa texto de la línea */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
     display: flex;
-    align-items: flex-end; /* Alinea el punto y el texto verticalmente */
-    gap: 20px; /* Espacio entre el punto y el texto */
-    padding-right: 31rem;
-    
+    justify-content: flex-end; /* alinea el texto a la derecha */
+    gap: 20px;
+    text-align: right;
 }
 
+/* Punto en la línea */
 .experience-dot {
     position: absolute;
-    right: 30%; /* Se alinea con la línea vertical */
+    left: 70%; /* coincide con la línea vertical */
     top: 0;
     width: 20px;
     height: 20px;
     background-color: var(--color-primary);
     border-radius: 50%;
     border: 3px solid var(--color-bg);
-    transition: transform 0.3s ease;
-    transform: translateX(-50%); /* Centra el punto sobre la línea */
-    z-index: 1; /* Asegura que el punto esté encima de la línea */
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
-/****************++++
+.experience-item:hover .experience-dot {
+    transform: scale(1.2);
+    background-color: var(--color-secondary);
+}
+
 
 /************SKILLS***********/
 
