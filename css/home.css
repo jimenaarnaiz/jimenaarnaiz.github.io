@@ -43,6 +43,9 @@
 
 }
 
+
+
+
 .about-me .about-me-info .engineer {
     font-weight: 600;
     font-size: 18px;
@@ -65,13 +68,38 @@
 
 }
 
-
-.skills h2 {
-    margin-bottom: 2%;
-    /* espacio entre el título y la lista */
+.education {
+    margin-top: 2rem;
+    color: var(--color-text);
+    text-align: center;
 }
 
+.education-info{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* espacio entre los elementos */
+    align-items: center;
+    /* centra los elementos horizontalmente */
+}
+
+.education p{
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.education h4{
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: 17px;
+}
+
+
 .skills-tools ul {
+    margin-top: 1.5rem;
     list-style: none;
     display: flex;
     /* Pone los <li> en fila */
@@ -100,14 +128,18 @@
 .skills,
 .skills-tools,
 .projects h1,
-.contact-me h1 {
+.contact-me h1,
+.education h1 {
     color: var(--color-primary);
     font-weight: 800;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    
 }
 
+
 .skills-scroll {
+    margin-top: 1.5rem;
     overflow: hidden;
     margin-left: 30%;
     margin-right: 30%;
@@ -138,6 +170,7 @@
 }
 
 .projects .projects-grid {
+    margin-top: 0.5rem;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
