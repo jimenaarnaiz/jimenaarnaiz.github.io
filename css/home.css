@@ -137,7 +137,7 @@
 
 /**
 /* Línea vertical central */
-.education-info::before{
+.education-info::before, .experience-info::before {
     content: "";
     position: absolute;
     left: 30%; /* Centra la línea */
@@ -277,8 +277,10 @@
     font-weight: 800;
     text-align: center;
     margin-top: 4rem;
+    letter-spacing: 3px; /* espacio entre letras */
     
 }
+
 
 
 .skills-scroll {
@@ -552,6 +554,11 @@
         /* Igual que el ancho para círculo */
     }
 
+    .about-me-info .descripcion {
+        max-width: 280px;
+        /* para que no se extienda demasiado */
+    }
+
     .contact-me-card {
         width: 80%;
     }
@@ -571,8 +578,39 @@
         }
     }
 
+    
+    .education-info, .experience-info {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        /* para que no se extienda demasiado */
+    
+    }
+
+    .education-info::before, .experience-info::before {
+        left: 20%;
+        /* Centra la línea */
+    }
+
+    .education-item, .experience-item {
+        padding-left: 25%;
+        /* Un pequeño padding para separar del borde */
+        margin-bottom: 2rem;
+        text-align: left;
+
+    }
+
+    .education-dot, .experience-dot {
+        left: 20%;
+        /* Se alinea con la línea vertical */
+    }
 
 }
+
+
+
+
+
+
 
 
 @media screen and (max-width: 600px) {
