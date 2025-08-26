@@ -687,12 +687,15 @@
         text-align: left;
     }
 
-    .contact-me-form input {
+    .contact-me-form-name-email {
+        flex-direction: column;
         gap: 20px;
         /* espacio entre los campos */
-        flex-direction: column;
-        padding: 8px;
+       padding: 8px;
+    }
 
+    .contact-me-form-name-email input{
+        height: 34px;
     }
 
     .contact-me-form button {
