@@ -94,11 +94,9 @@
 }
 
 /******************************* Educación */
-.education{
+.education, .experience{
     margin-top: 2rem;
     color: var(--color-text);
-    text-align: center;
-    position: relative;
 }
 
 .education p, .experience p{
@@ -132,10 +130,10 @@
     flex-direction: column;
     gap: 10px;
     /* espacio entre los elementos */
-    text-align: righ;
+    text-align: right;
 }
 
-/**
+
 /* Línea vertical central */
 .education-info::before, .experience-info::before {
     content: "";
@@ -162,7 +160,7 @@
     display: flex;
     align-items: flex-start; /* Alinea el punto y el texto verticalmente */
     gap: 20px; /* Espacio entre el punto y el texto */
-    padding-left: 31rem;
+    padding-left: 33%; /* separa texto de la línea */
     
 }
 
@@ -207,7 +205,7 @@
     position: relative;
     margin-bottom: 2.5rem;
     padding-left: 0; /* no necesitamos padding izquierdo */
-    padding-right: calc(100% - 70% + 2rem); /* separa texto de la línea */
+    padding-right: 33%; /* separa texto de la línea */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
@@ -227,14 +225,11 @@
     background-color: var(--color-primary);
     border-radius: 50%;
     border: 3px solid var(--color-bg);
+    transition: transform 0.3s ease;
     transform: translateX(-50%);
     z-index: 1;
 }
 
-.experience-item:hover .experience-dot {
-    transform: scale(1.2);
-    background-color: var(--color-secondary);
-}
 
 
 /************SKILLS***********/
@@ -245,6 +240,7 @@
     list-style: none;
     display: flex;
     /* Pone los <li> en fila */
+    flex-wrap: wrap;   /* 🔑 permite que los hijos bajen de línea */
     gap: 20px;
     /* Espacio entre elementos */
     justify-content: center;
@@ -280,8 +276,6 @@
     letter-spacing: 3px; /* espacio entre letras */
     
 }
-
-
 
 .skills-scroll {
     margin-top: 1.5rem;
@@ -331,16 +325,6 @@
 
 
 }
-
-
-/*para q no queden 3 y 1*/
-@media screen and (max-width: 1100px) {
-    .projects .projects-grid {
-        grid-template-columns: repeat(2, minmax(120px, 200px));
-
-    }
-}
-
 
 .quizec img,
 .recipeat img,
@@ -450,7 +434,7 @@
     margin-left: auto;
     margin-right: auto;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 10px 20px 10px;
 }
 
 
@@ -517,8 +501,6 @@
     font-family: "Mukta", sans-serif;
     background-color: var(--color-input-bg);
     color: var(--color-text);
-
-
 
 }
 
@@ -596,8 +578,11 @@
         /* Un pequeño padding para separar del borde */
         margin-bottom: 2rem;
         text-align: left;
+        justify-content: flex-start; /* alinea el texto de experience a la izquierda */
 
     }
+
+
 
     .education-dot, .experience-dot {
         left: 20%;
@@ -605,11 +590,6 @@
     }
 
 }
-
-
-
-
-
 
 
 
@@ -670,6 +650,8 @@
         /* Se alinea con la línea vertical */
     }
 
+    
+
     .skills-lan ul {
         gap: 1.5rem;
         animation: deslizar 12s linear infinite;
@@ -691,6 +673,12 @@
 
     }
 
+
+    .skills-tools ul {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     .contact-me-form {
         width: 100%;
         padding-left: 1rem;
@@ -699,10 +687,11 @@
         text-align: left;
     }
 
-    .contact-me-form-name-email {
+    .contact-me-form input {
         gap: 20px;
         /* espacio entre los campos */
         flex-direction: column;
+        padding: 8px;
 
     }
 
@@ -711,5 +700,14 @@
         /* botón ocupa todo el ancho en pantallas pequeñas */
         white-space: nowrap;
         /* evita que el texto se divida en varias líneas */
+    }
+}
+
+
+/*para q el grid no quede con 3 y 1*/
+@media screen and (max-width: 1100px) {
+    .projects .projects-grid {
+        grid-template-columns: repeat(2, minmax(120px, 200px));
+
     }
 }

@@ -12,8 +12,8 @@ class MyHeader extends HTMLElement {
       .header {
           background-color: var(--color-primary);
           padding: 1%;
-          padding-left: 1rem;
-          padding-right: 1rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
