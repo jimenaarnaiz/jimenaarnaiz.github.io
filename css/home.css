@@ -479,7 +479,6 @@
     color: var(--color-text);
     border-color: var(--color-border);
 
-
 }
 
 .contact-me-form-end {
@@ -691,7 +690,6 @@
         flex-direction: column;
         gap: 20px;
         /* espacio entre los campos */
-       padding: 8px;
     }
 
     .contact-me-form-name-email input{

@@ -53,7 +53,7 @@ body.dark-mode {
 
 } 
 
-html {
+html, input {
     font-family: "Mukta", sans-serif;
     background-color: var(--color-bg);
     /*background-image: url(../img/55044d7dbeb90a8a32c8be0522acf489.jpg);*/
