@@ -1,7 +1,6 @@
 class MyFooter extends HTMLElement {
     constructor() {
         super();
-        // Crear Shadow DOM 
         this.attachShadow({ mode: "open" });
     }
 
@@ -27,15 +26,21 @@ class MyFooter extends HTMLElement {
 
         .contact-me-socials {
             display: flex;
-            /* necesario para que el gap funcione */
+
             justify-content: center;
-            /* centra los íconos horizontalmente */
+
             gap: 18px;
             margin-bottom: 1rem;
         }
 
         .contact-me-socials a:hover svg {
             filter: brightness(0.8);
+        }
+
+        .contact-me-socials a:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 4px;
+            border-radius: 4px;
         }
 
         .contact-me-socials svg {
@@ -50,7 +55,7 @@ class MyFooter extends HTMLElement {
       <footer>
         <div class="contact-me-socials">
 
-                <a href="https://www.linkedin.com/in/jimena-arnaiz-gonz%C3%A1lez-b10978289/">
+                <a href="https://www.linkedin.com/in/jimena-arnaiz-gonz%C3%A1lez-b10978289/" aria-label="Jimena on LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" class="contact-me-linkedin" viewBox="0 0 16 16">
                         <path
                         fill="#fff"
@@ -58,7 +63,7 @@ class MyFooter extends HTMLElement {
                     </svg>
                 </a>
 
-                <a href="https://github.com/jimenaarnaiz">
+                <a href="https://github.com/jimenaarnaiz" aria-label="Jimena on GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" class="contact-me-github" viewBox="0 0 16 16">
                         <path
                             fill="#fff"
@@ -68,10 +73,28 @@ class MyFooter extends HTMLElement {
 
         </div>
 
-        <p>© 2025 Jimena A. All rights reserved.</p>
+        <p>© <span class="copyright-year"></span> Jimena Arnaiz González</p>
     </footer>
 
     `;
+
+        this.shadowRoot.querySelector(".copyright-year").textContent = new Date().getFullYear();
+
+        const updateSocialLabels = (language) => {
+            this.shadowRoot.querySelector('[href*="linkedin"]').setAttribute(
+                "aria-label",
+                language === "es" ? "Jimena en LinkedIn" : "Jimena on LinkedIn"
+            );
+            this.shadowRoot.querySelector('[href*="github"]').setAttribute(
+                "aria-label",
+                language === "es" ? "Jimena en GitHub" : "Jimena on GitHub"
+            );
+        };
+
+        updateSocialLabels(document.documentElement.lang);
+        document.addEventListener("portfolio-language-change", (event) => {
+            updateSocialLabels(event.detail.language);
+        });
 
 
     }

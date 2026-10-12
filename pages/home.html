@@ -1,109 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Asegura que la página se vea bien en dispositivos móviles-->
-
-    <title>My first web page!</title>
+    <meta name="description" content="Portfolio of Jimena Arnaiz González, computer engineer and software developer." data-i18n-en="Portfolio of Jimena Arnaiz González, computer engineer and software developer." data-i18n-es="Portfolio de Jimena Arnaiz González, ingeniera informática y desarrolladora de software.">
+    <meta name="theme-color" content="#fff3f7">
+    <title>Jimena Arnaiz González | Software Engineer</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
 </head>
 
 
 <body>
+    <a class="skip-link" href="#main-content" data-i18n-en="Skip to content" data-i18n-es="Saltar al contenido">Skip to content</a>
     <my-header></my-header>
 
-    <main>
-        <section id="about-me" class="about-me">
+    <main id="main-content" tabindex="-1">
+        <section id="about-me" class="about-me" tabindex="-1">
             <div class="about-me-img">
                 <div class="img-item">
-                    <img src="../img/jimena-foto.jpg" class="jimena-foto" alt="Foto de Jimena">
+                    <img src="../img/jimena-foto.jpg" class="jimena-foto" alt="Portrait of Jimena Arnaiz González" data-i18n-alt-en="Portrait of Jimena Arnaiz González" data-i18n-alt-es="Retrato de Jimena Arnaiz González">
                 </div>
             </div>
             <div class="about-me-info">
                 <div class="about-me-saludo">
-                    <h1 class="about-me-title">Hi, I'm</h1>
+                    <p class="about-me-title" data-i18n-en="Hi, I'm" data-i18n-es="Hola, soy">Hi, I'm</p>
                 </div>
                 <h1 class="nombre">Jimena Arnaiz González</h1>
-                <h2 class="engineer">Software Engineer</h2>
-                <p class="descripcion">I am especially interested in <span class="web">web development</span> and <span
-                        class="android">Android app development</span>. I adapt quickly to new environments and
-                    technologies, driven by a strong motivation to continuously learn and deepen my knowledge across
-                    various areas of Computer Science.
-                </p>
+                <p class="engineer" data-i18n-en="Software Engineer" data-i18n-es="Ingeniera informática">Software Engineer</p>
+                <p class="descripcion"><span data-i18n-en="I am especially interested in" data-i18n-es="Me interesan especialmente">I am especially interested in</span> <span class="web" data-i18n-en="web development" data-i18n-es="el desarrollo web">web development</span> <span data-i18n-en="and" data-i18n-es="y">and</span> <span class="android" data-i18n-en="Android app development" data-i18n-es="el desarrollo de aplicaciones Android">Android app development</span><span data-i18n-en=". I adapt quickly to new environments and technologies, driven by a strong motivation to keep learning and deepen my knowledge across different areas of computer science." data-i18n-es=". Me adapto con rapidez a nuevos entornos y tecnologías, y me motiva seguir aprendiendo y ampliando mis conocimientos en distintas áreas de la informática.">. I adapt quickly to new environments and technologies, driven by a strong motivation to keep learning and deepen my knowledge across different areas of computer science.</span></p>
             </div>
         </section>
 
-        <section class="education">
-            <h1>Education</h1>
+        <section class="education" id="education" tabindex="-1">
+            <h2 data-i18n-en="Education" data-i18n-es="Formación">Education</h2>
             <div class="education-info">
 
                 <div class="education-item">
-                     <div class="education-dot"></div>
+                     <div class="education-dot" aria-hidden="true"></div>
                     <div class="education-text">
-                        <h3>High School Diploma in Science and Technology</h3>
+                        <h3 data-i18n-en="High School Diploma in Science and Technology" data-i18n-es="Bachillerato de Ciencias y Tecnología">High School Diploma in Science and Technology</h3>
                         <h4>IES Camino de Santiago</h4>
-                        <p>Sept 2019 - Jun 2021</p>
+                        <p><time datetime="2019-09" data-i18n-en="Sept 2019" data-i18n-es="sept 2019">Sept 2019</time> – <time datetime="2021-06" data-i18n-en="Jun 2021" data-i18n-es="jun 2021">Jun 2021</time></p>
                     </div>
                 </div>
 
                 <div class="education-item">
-                     <div class="education-dot"></div>
+                     <div class="education-dot" aria-hidden="true"></div>
                     <div class="education-text">
-                        <h3>Degree in Computer Engineering</h3>
+                        <h3 data-i18n-en="Degree in Computer Engineering" data-i18n-es="Grado en Ingeniería Informática">Degree in Computer Engineering</h3>
                         <h4>Universidad de Burgos</h4>
-                        <p>Sept 2021 - Jun 2025</p>
+                        <p><time datetime="2021-09" data-i18n-en="Sept 2021" data-i18n-es="sept 2021">Sept 2021</time> – <time datetime="2025-06" data-i18n-en="Jun 2025" data-i18n-es="jun 2025">Jun 2025</time></p>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section class="experience">
-            <h1>Experience</h1>
+        <section class="experience" id="experience" tabindex="-1">
+            <h2 data-i18n-en="Experience" data-i18n-es="Experiencia">Experience</h2>
             <div class="experience-info">
 
                 <div class="experience-item">
-                     <div class="experience-dot"></div>
+                     <div class="experience-dot" aria-hidden="true"></div>
                     <div class="experience-text">
-                        <h3>Software Engineer Intern</h3>
+                        <h3 data-i18n-en="Computer Engineer Intern" data-i18n-es="Becaria de Ingeniería Informática">Computer Engineer Intern</h3>
                         <h4>Soluciones Informáticas Burgos</h4>
-                        <p>Apr 2025 - Jun 2025</p>
+                        <p><time datetime="2025-04-01" data-i18n-en="Apr 1, 2025" data-i18n-es="1 abr 2025">Apr 1, 2025</time> – <time datetime="2025-06-28" data-i18n-en="Jun 28, 2025" data-i18n-es="28 jun 2025">Jun 28, 2025</time></p>
+                        <div class="experience-summary">
+                            <p data-i18n-en="Development of enterprise applications with Power Apps. Data integration and management using Microsoft tools, data modeling and relationship design, user interface design, and workflow automation within the Microsoft platform." data-i18n-es="Desarrollo de aplicaciones empresariales mediante Power Apps. Integración y gestión de datos con herramientas de Microsoft, modelado de datos y relaciones, diseño de interfaces de usuario y automatización de procesos con la plataforma Microsoft.">Development of enterprise applications with Power Apps. Data integration and management using Microsoft tools, data modeling and relationship design, user interface design, and workflow automation within the Microsoft platform.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-dot" aria-hidden="true"></div>
+                    <div class="experience-text">
+                        <h3 data-i18n-en="Developer" data-i18n-es="Desarrolladora">Developer</h3>
+                        <h4>CSA</h4>
+                        <p><time datetime="2025-09-09" data-i18n-en="Sep 9, 2025" data-i18n-es="9 sept 2025">Sep 9, 2025</time> – <span data-i18n-en="Present" data-i18n-es="Actualidad">Present</span></p>
+                        <div class="experience-summary">
+                            <p data-i18n-en="Development, maintenance, and continuous improvement of a web environment comprising several portals, a real-time information map, a chat application, and unified access to its services. Incident resolution, backend and frontend development and support, and enhancement of existing features. Work with Docker containers and technologies including Python, Flask, Go, and MariaDB. Design and maintenance of web interfaces using HTML, CSS, Bootstrap, and JavaScript. Support for an internal corporate chat system, including incident resolution, configuration, and service adjustments." data-i18n-es="Desarrollo, mantenimiento y mejora continua de un entorno web compuesto por varios portales, un mapa de información en tiempo real, una aplicación de chat y acceso unificado a sus servicios. Resolución de incidencias, desarrollo y soporte backend y frontend, y mejora de funcionalidades existentes. Trabajo con contenedores Docker y tecnologías como Python, Flask, Go y MariaDB. Diseño y mantenimiento de interfaces web con HTML, CSS, Bootstrap y JavaScript. Soporte de un sistema de chat corporativo, incluyendo resolución de incidencias, configuración y ajuste del servicio.">Development, maintenance, and continuous improvement of a web environment comprising several portals, a real-time information map, a chat application, and unified access to its services. Incident resolution, backend and frontend development and support, and enhancement of existing features. Work with Docker containers and technologies including Python, Flask, Go, and MariaDB. Design and maintenance of web interfaces using HTML, CSS, Bootstrap, and JavaScript. Support for an internal corporate chat system, including incident resolution, configuration, and service adjustments.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="skills">
+        <section class="skills" id="skills" tabindex="-1">
             <div class="skills-lan">
-                <h2>Skills</h2>
+                <h2 data-i18n-en="Languages &amp; Web" data-i18n-es="Lenguajes y web">Languages &amp; Web</h2>
                 <div class="skills-scroll">
                     <div class="skills-track">
                         <ul>
-                            <li><img src="../img/python-svgrepo-com.svg" alt="Python logo" title="Python"></li>
-                            <li><img src="../img/kotlin-svgrepo-com.svg" alt="Kotlin logo" title="Kotlin"></li>
-                            <li><img src="../img/java-svgrepo-com.svg" alt="Java logo" title="Java"></li>
-                            <li><img src="../img/c.svg" alt="C logo" title="C"></li>
-                            <li><img src="../img/postgresql-svgrepo-com.svg" alt="PostgreSQL logo" title="PostgreSQL">
-                            </li>
-                            <li><img src="../img/html-5-svgrepo-com.svg" alt="HTML logo" title="HTML5"></li>
-                            <li><img src="../img/css-3-svgrepo-com.svg" alt="CSS logo" title="CSS3"></li>
+                            <li><img src="../img/python-svgrepo-com.svg" alt="Python" title="Python"></li>
+                            <li><img src="../img/go.svg" alt="Go" title="Go"></li>
+                            <li><img src="../img/javascript.svg" alt="JavaScript" title="JavaScript"></li>
+                            <li><img src="../img/kotlin-svgrepo-com.svg" alt="Kotlin" title="Kotlin"></li>
+                            <li><img src="../img/java-svgrepo-com.svg" alt="Java" title="Java"></li>
+                            <li><img src="../img/c.svg" alt="C" title="C"></li>
+                            <li><img src="../img/html-5-svgrepo-com.svg" alt="HTML5" title="HTML5"></li>
+                            <li><img src="../img/css-3-svgrepo-com.svg" alt="CSS3" title="CSS3"></li>
 
-                            <!-- duplicados para animación infinita sin cortes -->
-                            <li><img src="../img/python-svgrepo-com.svg" alt="Python logo" title="Python"></li>
-                            <li><img src="../img/kotlin-svgrepo-com.svg" alt="Kotlin logo" title="Kotlin"></li>
-                            <li><img src="../img/java-svgrepo-com.svg" alt="Java logo" title="Java"></li>
-                            <li><img src="../img/c.svg" alt="C logo" title="C"></li>
-                            <li><img src="../img/postgresql-svgrepo-com.svg" alt="PostgreSQL logo" title="PostgreSQL">
-                            </li>
-                            <li><img src="../img/html-5-svgrepo-com.svg" alt="HTML logo" title="HTML5"></li>
-                            <li><img src="../img/css-3-svgrepo-com.svg" alt="CSS logo" title="CSS3"></li>
+
+                            <li aria-hidden="true"><img src="../img/python-svgrepo-com.svg" alt="" title=""></li>
+                            <li aria-hidden="true"><img src="../img/go.svg" alt="" title=""></li>
+                            <li aria-hidden="true"><img src="../img/javascript.svg" alt="" title=""></li>
+                            <li aria-hidden="true"><img src="../img/kotlin-svgrepo-com.svg" alt="" title=""></li>
+                            <li aria-hidden="true"><img src="../img/java-svgrepo-com.svg" alt="" title=""></li>
+                            <li aria-hidden="true"><img src="../img/c.svg" alt="" title=""></li>
+                            <li aria-hidden="true"><img src="../img/html-5-svgrepo-com.svg" alt="" title=""></li>
+                            <li aria-hidden="true"><img src="../img/css-3-svgrepo-com.svg" alt="" title=""></li>
 
                         </ul>
                     </div>
@@ -112,98 +125,98 @@
 
             </div>
             <div class="skills-tools">
-                <h2>Tools</h2>
+                <h2 data-i18n-en="Technologies &amp; Tools" data-i18n-es="Tecnologías y herramientas">Technologies &amp; Tools</h2>
                 <ul>
-                    <li><img src="../img/git-svgrepo-com.svg" alt="Git logo" title="Git"></li>
-                    <li><img id="github-icon" src="../img/github-142-svgrepo-com.svg" alt="GitHub logo" title="GitHub">
-                    </li>
-                    <li><img src="../img/visual-studio-code-svgrepo-com.svg" alt="Visual Studio Code logo"
-                            title="VS Code"></li>
-                    <li><img src="../img/eclipse-icon-svgrepo-com.svg" alt="Eclipse logo" title="Eclipse"></li>
-                    <li><img src="../img/logo-google-android-studio-svgrepo-com.svg" alt="Android Studio logo"
-                            title="Android Studio"></li>
-                    <li><img src="../img/firebase-svgrepo-com.svg" alt="Firebase logo" title="Firebase"></li>
+                    <li><img src="../img/git-svgrepo-com.svg" alt="" title="Git"><span class="technology-name">Git</span></li>
+                    <li><img id="github-icon" src="../img/github-142-svgrepo-com.svg" alt="" title="GitHub"><span class="technology-name">GitHub</span></li>
+                    <li><img src="../img/visual-studio-code-svgrepo-com.svg" alt="" title="VS Code"><span class="technology-name">VS Code</span></li>
+                    <li><img src="../img/eclipse-icon-svgrepo-com.svg" alt="" title="Eclipse"><span class="technology-name">Eclipse</span></li>
+                    <li><img src="../img/android-studio-logo.svg" alt="" title="Android Studio"><span class="technology-name">Android Studio</span></li>
+                    <li><img src="../img/firebase-svgrepo-com.svg" alt="" title="Firebase"><span class="technology-name">Firebase</span></li>
+                    <li><img src="../img/postgresql-svgrepo-com.svg" alt="" title="PostgreSQL"><span class="technology-name">PostgreSQL</span></li>
+                    <li><img src="../img/powerapps.svg" alt="" title=""><span class="technology-name">Power Apps</span></li>
+                    <li><img src="../img/docker.svg" alt="" title=""><span class="technology-name">Docker</span></li>
+                    <li><img src="../img/flask.svg" alt="" title=""><span class="technology-name">Flask</span></li>
+                    <li><img src="../img/mariadb.svg" alt="" title=""><span class="technology-name">MariaDB</span></li>
+                    <li><img src="../img/vault.svg" alt="" title=""><span class="technology-name">Vault</span></li>
+                    <li><img src="../img/bootstrap.svg" alt="" title=""><span class="technology-name">Bootstrap</span></li>
                 </ul>
             </div>
         </section>
 
-        <section id="projects" class="projects">
-            <h1>Projects</h1>
+        <section id="projects" class="projects" tabindex="-1">
+            <h2 data-i18n-en="Projects" data-i18n-es="Proyectos">Projects</h2>
             <div class="projects-grid">
                 <div class="recipeat">
                     <div class="recipeat-img">
-                        <a href="https://github.com/jimenaarnaiz/recipEat">
-                            <img src="../img/TFG-recipeat.png" alt="recipEat logo">
+                        <a href="https://github.com/jimenaarnaiz/recipEat" target="_blank" rel="noopener noreferrer" aria-label="View recipEat on GitHub (opens in a new tab)" data-i18n-aria-en="View recipEat on GitHub (opens in a new tab)" data-i18n-aria-es="Ver recipEat en GitHub (se abre en una pestaña nueva)">
+                            <img src="../img/TFG-recipeat.png" alt="recipEat project artwork" data-i18n-alt-en="recipEat project artwork" data-i18n-alt-es="Imagen del proyecto recipEat">
                         </a>
                     </div>
                     <div class="recipeat-info">
                         <p class="recipeat-language">Kotlin</p>
-                        <h2>recipEat</h2>
-                        <p></p>
+                        <h3>recipEat</h3>
                     </div>
                 </div>
 
                 <div class="linja">
                     <div class="linja-img">
-                        <a href="https://github.com/jimenaarnaiz/SISIN/tree/main/LinjaGame">
-                            <img src="../img/linja-b-png.webp" alt="Linja image">
+                        <a href="https://github.com/jimenaarnaiz/SISIN/tree/main/LinjaGame" target="_blank" rel="noopener noreferrer" aria-label="View Linja game on GitHub (opens in a new tab)" data-i18n-aria-en="View Linja game on GitHub (opens in a new tab)" data-i18n-aria-es="Ver el juego Linja en GitHub (se abre en una pestaña nueva)">
+                            <img src="../img/linja-b-png.webp" alt="Linja game board" data-i18n-alt-en="Linja game board" data-i18n-alt-es="Tablero del juego Linja">
                         </a>
                     </div>
                     <div class="linja-info">
                         <p class="linja-language">Python</p>
-                        <h2>Linja game</h2>
-                        <p></p>
+                        <h3 data-i18n-en="Linja game" data-i18n-es="Juego Linja">Linja game</h3>
                     </div>
                 </div>
 
                 <div class="quantik">
                     <div class="quantik-img">
-                        <a href="https://github.com/jimenaarnaiz/recipEat">
-                            <img src="../img/quantik.webp" alt="Quantik image">
-                        </a>
+                        <img src="../img/quantik.webp" alt="Quantik game board" data-i18n-alt-en="Quantik game board" data-i18n-alt-es="Tablero del juego Quantik">
                     </div>
                     <div class="quantik-info">
                         <p class="quantik-language">Java</p>
-                        <h2>Quantik game</h2>
-                        <p></p>
+                        <h3 data-i18n-en="Quantik game" data-i18n-es="Juego Quantik">Quantik game</h3>
                     </div>
                 </div>
 
                 <div class="quizec">
                     <div class="quizec-img">
-                        <a href="https://github.com/jimenaarnaiz/Quizec">
-                            <img src="../img/QUIZEC-A2.jpg" alt="Quizec poster">
+                        <a href="https://github.com/jimenaarnaiz/Quizec" target="_blank" rel="noopener noreferrer" aria-label="View Quizec on GitHub (opens in a new tab)" data-i18n-aria-en="View Quizec on GitHub (opens in a new tab)" data-i18n-aria-es="Ver Quizec en GitHub (se abre en una pestaña nueva)">
+                            <img src="../img/QUIZEC-A2.jpg" alt="Quizec project poster" data-i18n-alt-en="Quizec project poster" data-i18n-alt-es="Cartel del proyecto Quizec">
                         </a>
                     </div>
                     <div class="quizec-info">
                         <p class="quizec-language">Kotlin</p>
-                        <h2>Quizec</h2>
-                        <p></p>
+                        <h3>Quizec</h3>
                     </div>
                 </div>
             </div>
 
         </section>
 
-        <section id="contact-me" class="contact-me">
+        <section id="contact-me" class="contact-me" tabindex="-1">
 
             <div class="contact-me-card">
-                <h3 class="contact-me-text">Let’s get in touch!</h3>
+                <h2 class="contact-me-text" data-i18n-en="Let’s get in touch!" data-i18n-es="¡Hablemos!">Let’s get in touch!</h2>
 
                 <form class="contact-me-form">
                     <div class="contact-me-form-name-email">
                         <div>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required />
+                            <label for="name" data-i18n-en="Name" data-i18n-es="Nombre">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" data-i18n-placeholder-en="Your name" data-i18n-placeholder-es="Tu nombre" autocomplete="name" required />
                         </div>
-                        <div> <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your email" required />
+                        <div> <label for="email" data-i18n-en="Email" data-i18n-es="Correo electrónico">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" data-i18n-placeholder-en="Your email" data-i18n-placeholder-es="Tu correo electrónico" autocomplete="email" required />
                         </div>
                     </div>
                     <div class="contact-me-form-end">
-                        <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+                        <label class="visually-hidden" for="message" data-i18n-en="Message" data-i18n-es="Mensaje">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message" data-i18n-placeholder-en="Write your message" data-i18n-placeholder-es="Escribe tu mensaje" required></textarea>
 
-                        <button type="submit">Send 📩</button>
+                        <button type="submit" data-i18n-en="Send 📩" data-i18n-es="Enviar 📩">Send 📩</button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
                     </div>
                 </form>
             </div>
@@ -215,11 +228,11 @@
 
     <my-footer></my-footer>
 
-    <!-- ############################## SCRIPTS ####################################### -->
-    <!-- Carga la librería de EmailJS -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <!--archivo JavaScript  -->
+
     <script src="../js/scripts.js"></script>
     <script src="../js/header-home.js" defer></script>
     <script src="../js/footer.js" defer></script>

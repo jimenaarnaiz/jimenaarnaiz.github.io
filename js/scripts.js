@@ -1,68 +1,49 @@
-  // ----- CONFIGURACION de EmailJS ----- 
-
-// Esta función se ejecuta al cargar el archivo.
-// Inicializa EmailJS
 (function () {
-  emailjs.init("olY4iy91a-lquNPnK"); //public key
+  if (typeof emailjs !== "undefined") {
+    emailjs.init("olY4iy91a-lquNPnK");
+  }
 })();
 
-// Espera a que todo el contenido de la página esté listo
 document.addEventListener("DOMContentLoaded", function () {
-  
-  // Seleccionamos el formulario
   const form = document.querySelector(".contact-me-form");
+  if (!form) return;
 
-  // Añadimos un evento cuando el usuario intente enviar el formulario
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Cancela el envío normal del formulario (no recarga la página)
+  const submitButton = form.querySelector('button[type="submit"]');
+  const status = form.querySelector(".form-status");
+  const messages = {
+    en: {
+      sending: "Sending…",
+      sent: "Your message was sent successfully.",
+      failed: "Sorry, your message could not be sent. Please try again.",
+      send: "Send 📩"
+    },
+    es: {
+      sending: "Enviando…",
+      sent: "Tu mensaje se ha enviado correctamente.",
+      failed: "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      send: "Enviar 📩"
+    }
+  };
 
-    // Obtenemos el botón de envío para desactivarlo temporalmente
-    const submitButton = form.querySelector("button");
-
-    // Cambiamos el texto del botón mientras se está enviando
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const copy = messages[document.documentElement.lang] || messages.en;
     submitButton.disabled = true;
-    submitButton.textContent = "Enviando...";
+    submitButton.textContent = copy.sending;
+    status.textContent = "";
 
-    // Llamamos a la función de EmailJS para enviar el formulario
-    // sendForm necesita: Service ID, Template ID y el formulario como tal
-    emailjs.sendForm("service_5ynz1x3", "template_rblycyj", form)
-      .then(function () {
-        alert("✅ ¡Correo enviado correctamente!");
-
-        // Limpiamos el formulario
-        form.reset();
-
-        // Restauramos el botón
-        submitButton.disabled = false;
-        submitButton.textContent = "Send 📩";
-      }, function (error) {
-        // Si ocurre un error
-        alert("❌ Error al enviar: " + JSON.stringify(error));
-
-        // Restauramos el botón
-        submitButton.disabled = false;
-        submitButton.textContent = "Send 📩";
-      });
+    try {
+      if (typeof emailjs === "undefined") {
+        throw new Error("Email service is unavailable");
+      }
+      await emailjs.sendForm("service_5ynz1x3", "template_rblycyj", form);
+      status.textContent = copy.sent;
+      form.reset();
+    } catch {
+      status.textContent = copy.failed;
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = copy.send;
+    }
   });
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
-
-
